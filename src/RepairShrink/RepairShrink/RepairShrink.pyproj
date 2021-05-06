@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19c770da-72fc-4eae-bcc1-13a0f1a418ce}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>RepairShrink.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RepairShrink</Name>
+    <RootNamespace>RepairShrink</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>D:\JohnGitHub\mySVN140818\RepairShrink\UnitTest\rotterdam\LOD2_overlapping_polys_DEC_SIM_hole_DEC.obj -s 7 </CommandLineArguments>
+    <InterpreterPath />
+    <InterpreterArguments />
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>{40d46bba-5f50-464e-88bb-fcb1083285f1}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CallRepair.py" />
+    <Compile Include="CarveFunc.py" />
+    <Compile Include="ClassConvexhull.py" />
+    <Compile Include="ClassFace.py" />
+    <Compile Include="ClassTetrahedron.py" />
+    <Compile Include="DecomposeFunc.py" />
+    <Compile Include="ModelData.py" />
+    <Compile Include="ModelDataFuncs.py" />
+    <Compile Include="RepairShrink.py" />
+    <Compile Include="SimpleMath.py" />
+    <Compile Include="TetraFunc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{40d46bba-5f50-464e-88bb-fcb1083285f1}\2.7" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

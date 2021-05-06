@@ -1,0 +1,1 @@
+remove VBoundedBySurface.java for CityGML 2.0
